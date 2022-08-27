@@ -1,0 +1,152 @@
+{
+	"info": {
+		"_postman_id": "62a5ac37-e903-4a2b-a632-e2d5e8a9a615",
+		"name": "Demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"username\",\r\n    \"fullname\": \"fullname\",\r\n    \"email\": \"email\",\r\n    \"dateOfBirth\": \"2022-08-24 15:27:40+06\",\r\n    \"phoneNumber\": \"0198787\",\r\n    \"address\": \"address\",\r\n    \"country\": \"country\",\r\n    \"gender\": \"male\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3009/user/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3009",
+					"path": [
+						"user",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"phoneNumber\": \"0197213\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3009/user/update/e3216608-f85a-41e0-a06b-cf0797b8908b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3009",
+					"path": [
+						"user",
+						"update",
+						"e3216608-f85a-41e0-a06b-cf0797b8908b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "soft delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"username\",\r\n    \"fullname\": \"fullname\",\r\n    \"email\": \"email\",\r\n    \"dateOfBirth\": \"2022-08-24 15:27:40+06\",\r\n    \"phoneNumber\": \"0198787\",\r\n    \"address\": \"address\",\r\n    \"country\": \"country\",\r\n    \"gender\": \"male\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3009/user/delete-parmanent/e3216608-f85a-41e0-a06b-cf0797b8908b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3009",
+					"path": [
+						"user",
+						"delete-parmanent",
+						"e3216608-f85a-41e0-a06b-cf0797b8908b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find-all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3009/user/getUserAll?is-and=false&gender=female&phoneNumber=019878",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3009",
+					"path": [
+						"user",
+						"getUserAll"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "nayeem",
+							"disabled": true
+						},
+						{
+							"key": "fullname",
+							"value": "fullname",
+							"disabled": true
+						},
+						{
+							"key": "is-and",
+							"value": "false"
+						},
+						{
+							"key": "page-size",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "page-number",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "gender",
+							"value": "female"
+						},
+						{
+							"key": "phoneNumber",
+							"value": "019878"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
