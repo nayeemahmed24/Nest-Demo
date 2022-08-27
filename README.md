@@ -24,7 +24,7 @@
 
 ## Description
 
-This is a demo project using NestJS. I have implemented user module and filtering in it. 
+This is a demo project using NestJS. I have implemented user module and filtering in it. Postman collection attached to it.
 Remaining Task: 
 - Seeder (It was taking time so need some R&D).
 
