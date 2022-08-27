@@ -24,7 +24,9 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+This is a demo project using NestJS. I have implemented user module and filtering in it. 
+Remaining Task: 
+- Seeder (It was taking time so need some R&D).
 
 ## Installation
 
