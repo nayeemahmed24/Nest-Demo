@@ -9,7 +9,7 @@ export class CreateUserDto {
 
     @ApiProperty()
     @IsNotEmpty()
-    public fullname: string[];
+    public fullname: string;
 
     @ApiProperty()
     @IsNotEmpty()
