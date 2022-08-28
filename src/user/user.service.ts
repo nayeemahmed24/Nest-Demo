@@ -96,6 +96,9 @@ export class UserService {
   }
 
   static getSqlQuery(query: QueryUserDTO) {
+    if(!query.fullname && !query.gender && !query.phoneNumber && !query.username){
+        return `SELECT * from users`;
+    }
     const logic: string = query.isAnd === true ? 'AND' : 'OR';
     let queryString = `SELECT * from users where ${
       query.username ? `username='${query.username}' ${logic}` : ''
@@ -105,7 +108,6 @@ export class UserService {
       query.gender ? `gender='${query.gender}' ${logic}` : ''
     }`;
     const index= queryString.lastIndexOf(logic);
-    
     queryString = queryString.substring(0, index - logic.length+1);
     return queryString;
   }
